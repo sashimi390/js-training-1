@@ -4,8 +4,28 @@ import Chart from "../../components/Chart04";
 import instruction from "./instruction.md";
 
 const convertData = (input) => {
-  return []; // ここを作りましょう！
+  const map = input.map(({ species }) => species);
+  const set = new Set(map);
+  const varieties = Array.from(set);
+  return varieties.map((varieties) => {
+    return {
+      id: varieties,
+      data: input.filter((data) => data.species === varieties).map(({ sepalLength: x, petalWidth: y }) => ({ x, y })),
+    };
+  });
 };
+
+/**const convertData = (input) => {
+
+  const varieties = Array.from(new Set(input.map(({ species }) => species)));
+  return varieties.map((varieties) => {
+    return {
+      id: varieties,
+      data: input.filter((data) => data.species === varieties).map(({ sepalLength: x, petalWidth: y }) => ({ x, y })),
+    };
+  });
+};*/
+
 
 const Lesson = () => {
   return (
