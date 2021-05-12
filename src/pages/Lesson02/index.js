@@ -6,6 +6,7 @@ import instruction from "./instruction.md";
 const convertData = (input) => {
   input.sort((a, b) => b.count - a.count);
   return input.slice(0, 20);
+  //sliceで上位20件を取り出す。
 };
 
 const Lesson = () => {

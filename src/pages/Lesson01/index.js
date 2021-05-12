@@ -4,7 +4,8 @@ import Chart from "../../components/Chart01";
 import instruction from "./instruction.md";
 
 const convertData = (input) => {
-  return input.map(([name, count]) => ({ name, count })); // ここを作りましょう！
+  return input.map(([name, count]) => ({ name, count }));
+  //map関数で要素の変換ができる
 };
 
 const Lesson = () => {
