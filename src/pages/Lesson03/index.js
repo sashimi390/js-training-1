@@ -4,8 +4,17 @@ import Chart from "../../components/Chart03";
 import instruction from "./instruction.md";
 
 const convertData = (input) => {
-  return input.filter(data => data.gender === "男性"); // ここを作りましょう！
+  const data = [];
+  for (let i = 0; i < input.length; i++) {
+    if (input[i].gender === "男性") {
+      data.push({ gender: input[i].gender, y: input[i].y, x: input[i].x });
+    }
+  }
+  return data;
+  //return input.filter(data => data.gender === "男性"); 
 };
+
+
 //dataの部分は変数名何にしても大丈夫？
 const Lesson = () => {
   return (
