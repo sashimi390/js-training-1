@@ -4,8 +4,12 @@ import Chart from "../../components/Chart01";
 import instruction from "./instruction.md";
 
 const convertData = (input) => {
-  return input.map(([name, count]) => ({ name, count }));
-  //map関数で要素の変換ができる
+  const arr = [];
+  for (let i = 0; i < input.length; i++) {
+    arr.push({ name: input[i][0], count: input[i][1] })
+  }
+  return arr;
+
 };
 
 const Lesson = () => {
