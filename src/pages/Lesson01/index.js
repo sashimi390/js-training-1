@@ -11,6 +11,22 @@ const convertData = (input) => {
   return arr;
 
 };
+/* const convertData = (input) => {
+  const data = new Array();
+  for (const [item1, item2] of input) {
+    data.push({ name: item1, count: item2 });
+  }
+  return data;
+}; */
+
+/* const convertData = (input) => {
+  const data = new Array(input.length);
+  for (const item of input) {
+    data.push({ name: item[0], count: item[1] })
+  }
+  return data;
+
+}; */
 
 const Lesson = () => {
   return (
